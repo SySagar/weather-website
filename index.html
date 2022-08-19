@@ -6,24 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
-    <!-- <link rel="stylesheet" href="https://www.flaticon.com/free-icons/pressure"> -->
     <title>Weather Website</title>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
 <body>
 
-
-    <div class="upper-container">
-        <input type="text" id="input-box" class="input-box" placeholder="Enter city name">
-
-         <a class="weatherwidget-io" href="https://forecast7.com/en/21d4983d88/burla/" data-label_1="BURLA"
+    <div class="header">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/21d4983d88/burla/" data-label_1="BURLA"
             data-label_2="WEATHER" data-theme="original">BURLA WEATHER</a>
         <script>
             !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
         </script> 
-        
+    </div>
 
+
+    <div class="upper-container">
+        <input type="text" id="input-box" class="input-box" placeholder="Enter city name">
+
+         
          <!-- <a class="weatherwidget-io" href="https://forecast7.com/en/21d4983d88/burla/" data-label_1="BURLA" data-label_2="WEATHER" data-theme="metallic" >BURLA WEATHER</a>
             <script>
             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js'); 
@@ -57,34 +58,35 @@
 
         <div class="weather-status">
             <div class="temp" id="temp">34&deg;C</div>
-            <div class="min-max" id="min-max">32&deg;C (min) / 34&deg;C (max)</div>
+            <!-- <div class="min-max" id="min-max">32&deg;C (min) / 34&deg;C (max)</div> -->
             <div class="weather" id="weather">Clear</div>
             <div id="img"></div>
 
         </div>
 
+        <br><br>
 
 
-
-        <ul>
-            <!-- <div class="wind-container"> -->
-            <li>Wind Speed</li>
-            <!-- <img src="windock.png"> -->
-            <!-- </div> -->
-            <!-- <div class="humidity-container"> -->
-            <li>humidity</li>
-            <!-- <img src="humidity.png"> -->
-            <!-- </div> -->
-            <!-- <div class="airPressure-container"> -->
-            <li>Air Pressure</li>
-            <!-- <img src="barometer.png"> -->
-            <!-- </div> -->
-            <!-- <div class="visibility-container"> -->
-            <li>Visibility</li>
-            <!-- <img src="low-visibility.png"> -->
-            <!-- </div> -->
+        <ul class="icon-container">
+            <li class="wind-speed">
+                <img src="windock.png">
+                <p>19 km/h</p>
+                <span>Wind Speed</span>
+            </li>
+            <li class="humidity">
+                <img src="humidity.png">
+                <p>95%</p>
+                <span>Humidity</span>
+            </li>
+            <li class="air-pressure">
+                <img src="barometer.png">
+                <p>1001 mb</p>
+                <span>Air Pressure</span>
+            </li>
         </ul>
 
+
+    
     </div>
 
     <script src="app.js"></script>
