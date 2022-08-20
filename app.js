@@ -10,7 +10,6 @@ const weatherwidget={
 }
 
 const searchInputBox = document.getElementById('input-box');
-
 // Event Listener Function on keypress
 searchInputBox.addEventListener('keypress', (event) => {
     
@@ -33,9 +32,42 @@ function getForecast(city){
 
 function showweatherwidget(weather){
     console.log(weather.list);
-    const mon=document.querySelector('.mon div');
-    var date=weather.list[0].dt_txt;
-    console.log(date.slice(11,));
+    var date=weather.list[2].dt_txt;
+    console.log(date.slice(11,16));
+
+    const widget=document.querySelector('.W-days');
+    widget.innerHTML=`<li>
+    <div class="temp">${Math.round(weather.list[0].main.temp)}&deg;C</div>
+    <div class="time">${weather.list[0].dt_txt.slice(11,)}</div>
+</li >
+<li>
+    <div class="temp">${Math.round(weather.list[1].main.temp)}&deg;C</div>
+    <div class="time">${weather.list[1].dt_txt.slice(11,)}</div>
+</li >
+<li >
+    <div class="temp">${Math.round(weather.list[2].main.temp)}&deg;C</div>
+    <div class="time">${weather.list[2].dt_txt.slice(11,)}</div>
+</li >
+<li >
+    <div class="temp">${Math.round(weather.list[3].main.temp)}&deg;C</div>
+    <div class="time">${weather.list[3].dt_txt.slice(11,)}</div>
+</li>
+<li >
+    <div class="temp">${Math.round(weather.list[4].main.temp)}&deg;C</div>
+    <div class="time">${weather.list[4].dt_txt.slice(11,)}</div>
+</li>
+<li >
+    <div class="temp">${Math.round(weather.list[5].main.temp)}&deg;C</div>
+    <div class="time">${weather.list[5].dt_txt.slice(11,)}</div>
+</li>
+<li >
+    <div class="temp">${Math.round(weather.list[6].main.temp)}&deg;C</div>
+    <div class="time">${weather.list[6].dt_txt.slice(11,)}</div>
+</li>
+<li >
+    <div class="temp">${Math.round(weather.list[7].main.temp)}&deg;C</div>
+    <div class="time">${weather.list[7].dt_txt.slice(11,)}</div>
+</li>`
 
 }
 // Get Weather Report

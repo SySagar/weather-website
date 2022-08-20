@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.disp{
+    display: none;
+}
 
 body {
     height: 100vh;
@@ -45,7 +48,7 @@ body {
 }
 .weather-body{
     text-align: center;
-    background-color: rgb(0, 187, 255);
+    /* background-color: rgb(0, 187, 255); */
     height: 500px;
 }
 .city{
@@ -91,37 +94,28 @@ li span{
     font-size: 20px;
 }
 .weather-days{
-    background-color: rgba(0, 179, 255,0.5);
+    background: rgba(0, 187, 255,0.5); 
 }
 .W-days{
-    display: inline-block;
-    width: 100%;
     white-space: nowrap;
-    max-width: 56%;
+    max-width: 1200px;
     margin: 0 auto;
-    text-decoration: none;
 }
-.W-days li{
-    text-align: center;
-    background-color: rgb(0, 179, 255);
-    border-radius: 10px;
-    padding: 8px;
+.W-days li {
+    display: inline-block;
+    width: 12.5%;
     font-size: 18px;
-    /* width: 25%; */
-    font-weight: 550;
-}
-.W-days li p{
+    padding: 0px 5px;
+    background: rgba(0, 187, 255);
+    border-radius: 15px;
     text-align: center;
-    padding: 10px;
+}
+.W-days li .temp{
+    font-size: 40px;
+}
+.W-days li .time{
     font-size: 20px;
-    font-weight: 700;
 }
-.W-days li .min-max{
-    text-align: center;
-    font-size: 15px;
-}
-
-
 
 .animation{
     display: flex;
@@ -132,6 +126,24 @@ li span{
     left :50%;
     
 }
+#vdo{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+ @media(min-aspect-ratio : 16/9){
+    #vdo{
+        width: 100%;
+        height: auto;
+    }
+ }
+ @media(max-aspect-ratio : 16/9){
+    #vdo{
+        width: auto;
+        height: 100%;
+    }
+ }
 
 #grad {
     background-image: linear-gradient(rgb(80, 75, 75), rgb(232, 232, 218));

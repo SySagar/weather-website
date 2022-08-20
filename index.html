@@ -12,7 +12,6 @@
 
 <body>
 
-    <div class="header">
         <!-- <a class="weatherwidget-io" href="https://forecast7.com/en/21d4983d88/burla/" data-label_1="BURLA"
             data-label_2="WEATHER" data-theme="original">BURLA WEATHER</a>
         <script>
@@ -21,37 +20,42 @@
 
         <div class="weather-days">
             <ul class="W-days">
-                <li class="mon">
-                    <p>Monday</p>
-                    <div class="min-max" id="min-max">29&deg;C (min) / 24&deg;C (max)</div>
-                </li>
-                <li class="tue">
-                    <p >Tuesday</p>
-                    <div class="min-max" id="min-max">29&deg;C (min) / 24&deg;C (max)</div>
-                </li>
-                <li class="wed">
-                    <p>Wednesday</p>
-                    <div class="min-max" id="min-max">29&deg;C (min) / 24&deg;C (max)</div>
-                </li>
-                <li class="thurs">
-                    <p>Thursday</p>
-                    <div class="min-max" id="min-max">29&deg;C (min) / 24&deg;C (max)</div>
-                </li>
-                <li class="fri">
-                    <p>Friday</p>
-                    <div class="min-max" id="min-max">29&deg;C (min) / 24&deg;C (max)</div>
+                <li>
+                    <div class="temp">31&deg;C</div>
+                    <div class="time">13:00</div>
+                </li >
+                <li>
+                    <div class="temp">31&deg;C</div>
+                    <div class="time">13:00</div>
+                </li >
+                <li>
+                    <div class="temp">31&deg;C</div>
+                    <div class="time">13:00</div>
+                </li >
+                <li>
+                    <div class="temp">31&deg;C</div>
+                    <div class="time">13:00</div>
                 </li>
                 <li>
-                    <p>Saturday</p>
-                    <div class="min-max" id="min-max">29&deg;C (min) / 24&deg;C (max)</div>
+                    <div class="temp">31&deg;C</div>
+                    <div class="time">13:00</div>
                 </li>
                 <li>
-                    <p>Sunday</p>
-                    <div class="min-max" id="min-max">29&deg;C (min) / 24&deg;C (max)</div>
+                    <div class="temp">31&deg;C</div>
+                    <div class="time">13:00</div>
                 </li>
+                <li>
+                    <div class="temp">31&deg;C</div>
+                    <div class="time">13:00</div>
+                </li>
+                <li>
+                    <div class="temp">31&deg;C</div>
+                    <div class="time">13:00</div>
+                </li>
+                
             </ul>
         </div>
-    </div>
+  
 
 
     <div class="upper-container">
@@ -63,30 +67,34 @@
             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js'); 
         </script> -->
 
-
-        <div class="date-time">
-            <div class="date" id="date">16 August, 2022</div>
-            <div class="time" id="time">00:29</div>
-
-
-        </div>
+       
+            <div class="date-time">
+                <div class="date" id="date">16 August, 2022</div>
+                <div class="time" id="time">00:29</div>
 
 
-        <div class="animation">
-            
+            </div>
+       
 
-            <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_orqfuyox.json" background="transparent"
-            speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+       
+            <div class="animation">
+                
 
-        <!-- <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_xlky4kvh.json" background="transparent"
-            speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player> -->
+                <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_orqfuyox.json" background="transparent"
+                speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+
+            <!-- <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_xlky4kvh.json" background="transparent"
+                speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player> -->
 
 
 
-        </div>
+            </div>
+        
         
     </div>
+    
     <div class="weather-body">
+    
         <div class="city" id="city">Burla, IN</div>
 
         <div class="weather-status">
@@ -94,7 +102,6 @@
             <!-- <div class="min-max" id="min-max">32&deg;C (min) / 34&deg;C (max)</div> -->
             <div class="weather" id="weather">Clear</div>
             <div id="img"></div>
-
         </div>
 
         <br><br>
@@ -117,10 +124,11 @@
                 <span>Air Pressure</span>
             </li>
         </ul>
-
-
-    
+        <video id="vdo" autoplay muted loop plays-inline>
+            <source src="vdo.mp4" type="video/mp4">
+        </video>
     </div>
+
 
     <script src="app.js"></script>
 </body>
