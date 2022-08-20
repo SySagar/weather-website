@@ -26,7 +26,7 @@ function getWeatherReport(city) {
     }).then(showWeatherReport);
 }
 
-// Show Weather Report
+// // Show Weather Report
 function showWeatherReport(weather){
     console.log(weather);
 
@@ -36,39 +36,73 @@ function showWeatherReport(weather){
     let temperature = document.getElementById('temp');
     temperature.innerHTML = `${Math.round(weather.main.temp)}&deg;C`;
 
-    let minMaxTemp = document.getElementById('min-max');
-    minMaxTemp.innerHTML = `${Math.floor(weather.main.temp_min)}&deg;C (min)/ ${Math.ceil(weather.main.temp_max)}&deg;C (max) `;
-
     let weatherType = document.getElementById('weather');
     weatherType.innerText = `${weather.weather[0].main}`;
 
     let date = document.getElementById('date');
     let todayDate = new Date();
     date.innerText = dateManage(todayDate);
+    let time =document.querySelector(".time");
+    time.innerText=todayDate.getHours()+":"+todayDate.getMinutes() ;
+
+    const animation=document.querySelector(".animation");
+
+    const wind=document.querySelector('.wind-speed p');
+    var result = Number(weather.wind.speed);
+    wind.innerText=`${Math.round(result * 3.6)} Km/h`;
+
+    const humidity=document.querySelector('.humidity p');
+    humidity.innerText=`${weather.main.humidity}%`;
+
+    const pressure=document.querySelector('.air-pressure p');
+    pressure.innerText=`${weather.main.pressure} hPa`;
 
     
+
     if(weatherType.textContent == 'Clear') {
-        document.body.style.backgroundImage = "url('images/clearSky.jpg')";
+        document.querySelector('.upper-container').style.backgroundImage='url(/images/clearSky1.jpg)';
+        document.querySelector('.upper-container .date-time').style.color='black';
+        animation.innerHTML=`<lottie-player src="https://assets10.lottiefiles.com/packages/lf20_jqfghjiz.json" background="transparent"
+        speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>`;
+        
         
     } else if(weatherType.textContent == 'Clouds') {
-
-        document.body.style.backgroundImage = "url('images/Cloudy.jpg')";
+        
+        document.querySelector('.upper-container').style.backgroundImage='url(/images/Cloudy1.jpg)';
+        document.querySelector('.upper-container .date-time').style.color='black';
+        animation.innerHTML=`<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_zsfbtp0v.json" background="transparent"
+        speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>`;
         
     } else if(weatherType.textContent == 'Haze') {
-
-        document.body.style.backgroundImage = "url('images/Haze.jpg')";
+        
+        document.querySelector('.upper-container').style.backgroundImage='url(/images/Haze1.jpg)';
+        document.querySelector('.upper-container .date-time').style.color='aliceblue';
+        document.querySelector('.upper-container').style.backgroundImage=
+        animation.innerHTML=`<lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_dmgebz1e.json" background="transparent"
+        speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>`;
         
     }     else if(weatherType.textContent == 'Rain') {
         
-        document.body.style.backgroundImage = "url('images/Rain.jpg')";
+        document.querySelector('.upper-container').style.backgroundImage='url(/images/Rain1.jpg)';
+        document.querySelector('.upper-container .date-time').style.color='aliceblue';
+        animation.innerHTML=`<lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_orqfuyox.json" background="transparent"
+        speed="0.5" style="width: 200px; height: 200px;" loop autoplay></lottie-player>`;
         
     } else if(weatherType.textContent == 'Snow') {
         
-        document.body.style.backgroundImage = "url('images/Snow.jpg')";
-    
+        document.querySelector('.upper-container').style.backgroundImage='url(/images/Snow1.jpg)';
+        
+        document.querySelector('.upper-container .date-time').style.color='black';
+        animation.innerHTML=`<lottie-player src="https://assets7.lottiefiles.com/private_files/lf30_0tyvusxj.json" background="transparent"
+        speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>`;
+        
     } else if(weatherType.textContent == 'Thunderstorm') {
-    
-        document.body.style.backgroundImage = "url('images/Thunder.jpg')";
+        
+        document.querySelector('.upper-container').style.backgroundImage='url(/images/Thunder.jpg)';
+        document.querySelector('.upper-container .date-time').style.color='aliceblue';
+        
+        animation.innerHTML=`<lottie-player src="https://assets1.lottiefiles.com/private_files/lf30_LPtaP2.json" background="transparent"
+        speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>`;
         
     } 
 }
@@ -84,7 +118,6 @@ function dateManage(dateArg) {
     let month = months[dateArg.getMonth()];
     let date = dateArg.getDate();
     let day = days[dateArg.getDay()];
-
     return `${date} ${month} (${day}), ${year}`;
 }
 
