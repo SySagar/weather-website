@@ -11,10 +11,14 @@ const weatherwidget={
 
 const searchInputBox = document.getElementById('input-box');
 // Event Listener Function on keypress
+const disp=document.querySelectorAll('nav');
 searchInputBox.addEventListener('keypress', (event) => {
     
     if(event.keyCode == 13) {
         console.log(searchInputBox.value);
+        disp.forEach(element=>{
+            element.classList.remove('disp');
+        })
         getForecast(searchInputBox.value);
         getWeatherReport(searchInputBox.value);
         document.querySelector('.weather-body').style.display = "block";
