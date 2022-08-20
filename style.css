@@ -76,7 +76,7 @@ body {
     font-weight: 600;
 }
 
-ul{
+ul .icon-container{
     white-space: nowrap;
     max-width: 100%;
     margin: 0 auto;
@@ -100,7 +100,36 @@ li p{
 li span{
     font-size: 20px;
 }
-
+.weather-days{
+    background-color: rgba(0, 179, 255,0.5);
+}
+.W-days{
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    max-width: 56%;
+    margin: 0 auto;
+    text-decoration: none;
+}
+.W-days li{
+    text-align: center;
+    background-color: rgb(0, 179, 255);
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 18px;
+    /* width: 25%; */
+    font-weight: 550;
+}
+.W-days li p{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.W-days li .min-max{
+    text-align: center;
+    font-size: 15px;
+}
 
 /* ul{
     white-space: nowrap;
