@@ -34,20 +34,9 @@ function getForecast(city){
 function showweatherwidget(weather){
     console.log(weather.list);
     const mon=document.querySelector('.mon div');
-    mon.innerHTML=`${Math.ceil(weather.list[0].main.temp_min)}&deg;C (min) / 24&deg;C (max)`;
-    mon.innerHTML=`${Math.floor(weather.list[0].main.temp_max)}&deg;C (min) / 24&deg;C (max)`;
-    const tue=document.querySelector('.tue div');
-    tue.innerHTML=`${Math.ceil(weather.list[9].main.temp_min)}&deg;C (min) / 24&deg;C (max)`;
-    tue.innerHTML=`${Math.floor(weather.list[9].main.temp_max)}&deg;C (min) / 24&deg;C (max)`;
-    const wed=document.querySelector('.wed div');
-    wed.innerHTML=`${Math.ceil(weather.list[17].main.temp_min)}&deg;C (min) / 24&deg;C (max)`;
-    wed.innerHTML=`${Math.floor(weather.list[17].main.temp_max)}&deg;C (min) / 24&deg;C (max)`;
-    const thurs=document.querySelector('.thurs div');
-    thurs.innerHTML=`${Math.ceil(weather.list[25].main.temp_min)}&deg;C (min) / 24&deg;C (max)`;
-    thurs.innerHTML=`${Math.floor(weather.list[25].main.temp_max)}&deg;C (min) / 24&deg;C (max)`;
-    // const thurs=document.querySelector('.thurs div');
-    // thurs.innerHTML=`${Math.ceil(weather.list[33].main.temp_min)}&deg;C (min) / 24&deg;C (max)`;
-    // thurs.innerHTML=`${Math.floor(weather.list[33].main.temp_max)}&deg;C (min) / 24&deg;C (max)`;
+    var date=weather.list[0].dt_txt;
+    console.log(date.slice(11,));
+
 }
 // Get Weather Report
 function getWeatherReport(city) {
