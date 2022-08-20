@@ -90,37 +90,28 @@ li span{
     font-size: 20px;
 }
 .weather-days{
-    background-color: rgba(0, 179, 255,0.5);
+    background: rgba(0, 187, 255,0.5); 
 }
 .W-days{
-    display: inline-block;
-    width: 100%;
     white-space: nowrap;
-    max-width: 56%;
+    max-width: 1200px;
     margin: 0 auto;
-    text-decoration: none;
 }
-.W-days li{
-    text-align: center;
-    background-color: rgb(0, 179, 255);
-    border-radius: 10px;
-    padding: 8px;
+.W-days li {
+    display: inline-block;
+    width: 12.5%;
     font-size: 18px;
-    /* width: 25%; */
-    font-weight: 550;
-}
-.W-days li p{
+    padding: 0px 5px;
+    background: rgba(0, 187, 255);
+    border-radius: 15px;
     text-align: center;
-    padding: 10px;
+}
+.W-days li .temp{
+    font-size: 40px;
+}
+.W-days li .time{
     font-size: 20px;
-    font-weight: 700;
 }
-.W-days li .min-max{
-    text-align: center;
-    font-size: 15px;
-}
-
-
 
 .animation{
     display: flex;
