@@ -4,6 +4,10 @@ const weatherApi = {
     key: "bab281d79e5f1e9755a68d754cc313e7",
     baseUrl: "https://api.openweathermap.org/data/2.5/weather", 
 }
+const weatherwidget={
+    key:'bab281d79e5f1e9755a68d754cc313e7',
+    baseurl:'https://api.openweathermap.org/data/2.5/forecast'
+}
 
 const searchInputBox = document.getElementById('input-box');
 
@@ -12,12 +16,39 @@ searchInputBox.addEventListener('keypress', (event) => {
     
     if(event.keyCode == 13) {
         console.log(searchInputBox.value);
+        getForecast(searchInputBox.value);
         getWeatherReport(searchInputBox.value);
         document.querySelector('.weather-body').style.display = "block";
     }
 
 });
 
+function getForecast(city){
+    fetch(`${weatherwidget.baseurl}?q=${city}&appid=${weatherApi.key}&units=metric`)
+    .then(forecast=>{
+        return forecast.json();
+    }).then(showweatherwidget);
+
+}
+
+function showweatherwidget(weather){
+    console.log(weather.list);
+    const mon=document.querySelector('.mon div');
+    mon.innerHTML=`${Math.ceil(weather.list[0].main.temp_min)}&deg;C (min) / 24&deg;C (max)`;
+    mon.innerHTML=`${Math.floor(weather.list[0].main.temp_max)}&deg;C (min) / 24&deg;C (max)`;
+    const tue=document.querySelector('.tue div');
+    tue.innerHTML=`${Math.ceil(weather.list[9].main.temp_min)}&deg;C (min) / 24&deg;C (max)`;
+    tue.innerHTML=`${Math.floor(weather.list[9].main.temp_max)}&deg;C (min) / 24&deg;C (max)`;
+    const wed=document.querySelector('.wed div');
+    wed.innerHTML=`${Math.ceil(weather.list[17].main.temp_min)}&deg;C (min) / 24&deg;C (max)`;
+    wed.innerHTML=`${Math.floor(weather.list[17].main.temp_max)}&deg;C (min) / 24&deg;C (max)`;
+    const thurs=document.querySelector('.thurs div');
+    thurs.innerHTML=`${Math.ceil(weather.list[25].main.temp_min)}&deg;C (min) / 24&deg;C (max)`;
+    thurs.innerHTML=`${Math.floor(weather.list[25].main.temp_max)}&deg;C (min) / 24&deg;C (max)`;
+    // const thurs=document.querySelector('.thurs div');
+    // thurs.innerHTML=`${Math.ceil(weather.list[33].main.temp_min)}&deg;C (min) / 24&deg;C (max)`;
+    // thurs.innerHTML=`${Math.floor(weather.list[33].main.temp_max)}&deg;C (min) / 24&deg;C (max)`;
+}
 // Get Weather Report
 function getWeatherReport(city) {
     fetch(`${weatherApi.baseUrl}?q=${city}&appid=${weatherApi.key}&units=metric`)
