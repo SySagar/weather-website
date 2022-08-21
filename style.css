@@ -40,6 +40,12 @@ body {
     padding: 15px;
     top: 30px;
     left: 35%;
+    transition: .4s;
+    /* align : center; */
+}
+.input-box:hover{
+    border: 2px solid blue;
+    cursor: pointer;
 }
 .upper-container .date-time{
     position: absolute;
@@ -59,12 +65,14 @@ body {
     color: white;
     font-size: 30px;
     font-weight: 600;
+    text-shadow: 0 0 8px rgb(0, 183, 255) , 0 0 10px rgb(255, 242, 97);
 }
 .temp1{
     font-size: 65px;
     color: white;
     padding: 10px;
     font-weight: bold ;
+    text-shadow: 0 0 8px rgb(0, 183, 255);
 }
 
 .weather{
@@ -72,6 +80,7 @@ body {
     font-size: 30px;
     color: white;
     font-weight: 600;
+    text-shadow: 0 0 8px rgb(58, 3, 255) , 0 0 10px rgb(255, 242, 97);
 }
 
 ul .icon-container{
@@ -95,6 +104,7 @@ li p{
     font-size: 30px;
     font-weight: 800;
     color: white;
+    /* background: rgba(255,255,255,0.5); */
 }
 li span{
     font-size: 20px;
@@ -104,6 +114,7 @@ li span{
     background: rgba(0, 187, 255,0.5); 
 }
 .W-days{
+    display: absolute ;
     white-space: nowrap;
     max-width: 1200px;
     margin: 0 auto;
@@ -126,19 +137,19 @@ li span{
 }
 
 .animation{
-    display: flex;
-    justify-content: center;
     position: absolute;
-    bottom: 0px;
-    
-    left :50%;
+    top: 40px;
+
+    left: 50px;
+    width: 50px;
     
 }
 #vdo{
-    position: absolute;
+    position: absolute; 
     right: 0;
     top: 0;
     z-index: -1;
+   
 }
  @media(min-aspect-ratio : 16/9){
     #vdo{
@@ -176,7 +187,9 @@ li span{
 
     }
     .animation{
-       right: 500px;
+       right: 1000px;
+       width: 200px;
+       align-items: center;
     }
     .weather-body{
           text-align: center;
@@ -213,18 +226,29 @@ li span{
          font-size: 25px;
          text-align: center;
     }
+    /*.weather-days{
+        max-width: 80%;
+    }
     .W-days{
-           max-width:25%;
-        
+           max-width:20%;
+           right: 300px;
+           align-items: center;
+           padding-left: 0px;
     }
     .W-days li{
-          width: 50%;
+          width: 90%;
+          right: 100px;
+          margin: 0px;
+          
     }
-    .W-days li p{
+    .W-days li .time{
          font-size: 20px;
     }
-    .W-days li .min-max{
-        font-size: 12px;
+    .W-days li .temp{
+        font-size: 25px;
+    }*/
+    #vdo{
+        height: 900px;
     }
 }
 @media screen and (max-width: 1024px) {
@@ -305,8 +329,9 @@ li span{
         height: 30%;
     }
     .input-box{
-         width: 35%;
+         width: 25%;
          margin-top: 0px;
+
     }
     .upper-container .date-time{
 
@@ -388,8 +413,8 @@ li span{
 
     }
     .animation{
-       width: 110px;
-       right: 170px;
+       width: 2px;
+       left: 20px;
        top: 60px;
     }
     .weather-body{
@@ -422,7 +447,7 @@ li span{
          text-align: center;
     }
     li p{
-         font-size: 18px;
+         font-size: 20px;
          text-align: center;
     }
     .W-days{

@@ -116,7 +116,7 @@ function showWeatherReport(weather){
     
 
     if(weatherType.textContent == 'Clear') {
-        document.querySelector('.upper-container').style.backgroundImage='url(/images/clearSky1.jpg)';
+        document.querySelector('.upper-container').style.backgroundImage='url(/clearSky1.jpg)';
         document.querySelector('.upper-container .date-time').style.color='black';
         animation.innerHTML=`<lottie-player src="https://assets10.lottiefiles.com/packages/lf20_jqfghjiz.json" background="transparent"
         speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>`;
@@ -124,14 +124,14 @@ function showWeatherReport(weather){
         
     } else if(weatherType.textContent == 'Clouds') {
         
-        document.querySelector('.upper-container').style.backgroundImage='url(/images/Cloudy1.jpg)';
+        document.querySelector('.upper-container').style.backgroundImage='url(/Cloudy1.jpg)';
         document.querySelector('.upper-container .date-time').style.color='black';
         animation.innerHTML=`<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_zsfbtp0v.json" background="transparent"
         speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>`;
         
     } else if(weatherType.textContent == 'Haze') {
         
-        document.querySelector('.upper-container').style.backgroundImage='url(/images/Haze1.jpg)';
+        document.querySelector('.upper-container').style.backgroundImage='url(/Haze1.jpg)';
         document.querySelector('.upper-container .date-time').style.color='aliceblue';
         document.querySelector('.upper-container').style.backgroundImage=
         animation.innerHTML=`<lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_dmgebz1e.json" background="transparent"
@@ -139,14 +139,14 @@ function showWeatherReport(weather){
         
     }     else if(weatherType.textContent == 'Rain') {
         
-        document.querySelector('.upper-container').style.backgroundImage='url(/images/Rain1.jpg)';
+        document.querySelector('.upper-container').style.backgroundImage='url(/Rain1.jpg)';
         document.querySelector('.upper-container .date-time').style.color='aliceblue';
         animation.innerHTML=`<lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_orqfuyox.json" background="transparent"
         speed="0.5" style="width: 200px; height: 200px;" loop autoplay></lottie-player>`;
         
     } else if(weatherType.textContent == 'Snow') {
         
-        document.querySelector('.upper-container').style.backgroundImage='url(/images/Snow1.jpg)';
+        document.querySelector('.upper-container').style.backgroundImage='url(/Snow1.jpg)';
         
         document.querySelector('.upper-container .date-time').style.color='black';
         animation.innerHTML=`<lottie-player src="https://assets7.lottiefiles.com/private_files/lf30_0tyvusxj.json" background="transparent"
@@ -154,7 +154,7 @@ function showWeatherReport(weather){
         
     } else if(weatherType.textContent == 'Thunderstorm') {
         
-        document.querySelector('.upper-container').style.backgroundImage='url(/images/Thunder.jpg)';
+        document.querySelector('.upper-container').style.backgroundImage='url(/Thunder.jpg)';
         document.querySelector('.upper-container .date-time').style.color='aliceblue';
         
         animation.innerHTML=`<lottie-player src="https://assets1.lottiefiles.com/private_files/lf30_LPtaP2.json" background="transparent"
