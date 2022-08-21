@@ -89,7 +89,7 @@ function showWeatherReport(weather){
     let city = document.getElementById('city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
 
-    let temperature = document.getElementById('temp');
+    let temperature = document.getElementById('temp1');
     temperature.innerHTML = `${Math.round(weather.main.temp)}&deg;C`;
 
     let weatherType = document.getElementById('weather');
@@ -98,7 +98,7 @@ function showWeatherReport(weather){
     let date = document.getElementById('date');
     let todayDate = new Date();
     date.innerText = dateManage(todayDate);
-    let time =document.querySelector(".time");
+    let time =document.querySelector(".time1");
     time.innerText=todayDate.getHours()+":"+todayDate.getMinutes() ;
 
     const animation=document.querySelector(".animation");
